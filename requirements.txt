@@ -1,0 +1,55 @@
+*********To Build an API *********
+
+Book Management Company
+
+BOOKS:
+ISBN(book id) , title, authors[], num pages, publication date, category[], language
+
+AUTHORS:
+id , name, books[] 
+
+PUBLICATIONS:
+id , name, books[] 
+
+we need to design an API on this
+
+*****GET******
+1.BOOKS:
+we need an API to get:
+* All the books
+* A specific book
+* A list of books based on category
+* A list of books based on language
+
+2.AUTHORS:
+we need an API to get:
+* All authors
+* A specific author
+* A list of authors based on books
+
+3.PUBLICATIONS:
+we need an API to get:
+* All publications
+* A specific publication
+* A list of publications based on books
+
+
+npm i express
+npm i nodemon
+npx nodemon index.js
+
+******POST REQUEST******
+1. Add new book
+2. Add new author
+3. Add new publication
+
+*****PUT*****
+1. Update the book details when publication is changed or added
+* we have 2 tasks to perform
+-> When passed a publication id in postman, we check whether the publication is present , then update the book array with the isbn passed 
+-> Then the passed isbn is checked with the ISBN of the books ,if same then update the publications array to the publication id.  
+
+*****DELETE*****
+1. Delete a book
+2. Delete author from book
+3. Delete author from book and related book from author.
